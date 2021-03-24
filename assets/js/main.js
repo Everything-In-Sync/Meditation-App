@@ -51,6 +51,11 @@
 //     document.querySelector('#btn-fifteen').remove();
 //     document.querySelector('#btn-thirty').remove();
 // }
+// const returnButton = document.querySelector('#return-button');
+// returnButton.onclick = function(){
+//     document.querySelector('body').innerHTML = body;
+// }
+const container = document.querySelector('#container');
 
 const body = document.querySelector('body');
 
@@ -81,6 +86,7 @@ btnFive.onclick = function(){
     const videoElement = document.createElement('div');
 //Set's the ID of that div to five-min-video
     videoElement.setAttribute('class', 'video-style')
+    videoElement.setAttribute('id', 'video')
 //Injects the embeded video HTML into the new div
     videoElement.innerHTML = fiveMinVideo;
 //Places the new div under the main-button id 
@@ -91,11 +97,22 @@ btnFive.onclick = function(){
     const returnButtonElement = document.createElement('div');
 //Creating a class on that div called return-button-style
     returnButtonElement.setAttribute('class','return-button-style');
+//Creating an ID on that div
+    returnButtonElement.setAttribute('id','return-button');
 //Sets the inner HTML of that div to the content in the returnButtonContent variable
     returnButtonElement.innerHTML = returnButtonContent;
 //Appends the new element with content to the return button div in the DOM
     returnButtonDiv.append(returnButtonElement);
 }
+returnButton = document.querySelector('#return-button');
+const video = document.querySelector('#video')
+returnButton.onclick = function(){
+    body.style.backgroundColor = "white";
+    video.remove();
+    returnButton.remove();
+    body.append(container);
+}
+
 btnFifteen.onclick = function(){
     btnFive.remove();
     btnFifteen.remove();
