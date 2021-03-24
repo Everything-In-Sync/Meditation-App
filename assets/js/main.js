@@ -56,6 +56,12 @@ const body = document.querySelector('body');
 
 //Saves the div with an id of video to a variable so I can append the video to it later
 const videoDiv = document.querySelector('#video');
+//Saves the div witht he id of return-button to a constant so I can append to it later
+const returnButtonDiv = document.querySelector('#return-button')
+
+const returnButtonContent = `
+    <button id="return-button">Return</button>
+`
 //Saves the HTML for the embeded video to a constant
 const fiveMinVideo = `
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3RxXiFgkxGc" 
@@ -81,7 +87,14 @@ btnFive.onclick = function(){
     videoDiv.append(videoElement);
 //When button is clicked, changes the background color to black
     body.style.backgroundColor = "black";
-
+//Creates a new div which will house the return button
+    const returnButtonElement = document.createElement('div');
+//Creating a class on that div called return-button-style
+    returnButtonElement.setAttribute('class','return-button-style');
+//Sets the inner HTML of that div to the content in the returnButtonContent variable
+    returnButtonElement.innerHTML = returnButtonContent;
+//Appends the new element with content to the return button div in the DOM
+    returnButtonDiv.append(returnButtonElement);
 }
 btnFifteen.onclick = function(){
     btnFive.remove();
