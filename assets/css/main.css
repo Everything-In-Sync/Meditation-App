@@ -11,9 +11,10 @@
     width: 200px;
     margin-top: 20%;
 }
-.testing{
-    color:purple;
-}
-#btn-five{
-
+/*centers the video in the absolute center of the viewport*/
+.video-style{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

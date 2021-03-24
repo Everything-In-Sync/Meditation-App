@@ -21,44 +21,6 @@
 // document.querySelector('#btn-five').onclick = function(){
 //     console.log(document.querySelector('#btn-five').innerHTML)
 // }
-const mainButtons = document.querySelector('#main-buttons');
-//Saves the HTML for the embeded video to a constant
-const fiveMinVideo = `
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3RxXiFgkxGc" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-//Saves the button Id's to variables
-let btnFive = document.querySelector('#btn-five');
-let btnFifteen = document.querySelector('#btn-fifteen');
-let btnThirty = document.querySelector('#btn-thirty');
-
-btnFive.onclick = function(){
-//Uses the variables to remove the buttons when the user clicks on them.
-    btnFive.remove();
-    btnFifteen.remove();
-    btnThirty.remove();
-//Creates a div and saves it to a constant
-    const videoElement = document.createElement('div');
-//Set's the ID of that div to five-min-video
-    videoElement.setAttribute('id', 'five-min-video')
-//Injects the embeded video HTML into the new div
-    videoElement.innerHTML = fiveMinVideo;
-//Places the new div under the main-button id 
-    mainButtons.append(videoElement);
-
-}
-btnFifteen.onclick = function(){
-    btnFive.remove();
-    btnFifteen.remove();
-    btnThirty.remove();
-}
-btnThirty.onclick = function (){
-    btnFive.remove();
-    btnFifteen.remove();
-    btnThirty.remove();
-}
-
-
 // This does not work, not sure why.
 // function removeBtns (){
 //     btnFive.onclick.remove();
@@ -90,7 +52,52 @@ btnThirty.onclick = function (){
 //     document.querySelector('#btn-thirty').remove();
 // }
 
+const body = document.querySelector('body');
+
+//Saves the div with an id of video to a variable so I can append the video to it later
+const videoDiv = document.querySelector('#video');
+//Saves the HTML for the embeded video to a constant
+const fiveMinVideo = `
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3RxXiFgkxGc" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+//Saves the button Id's to variables
+let btnFive = document.querySelector('#btn-five');
+let btnFifteen = document.querySelector('#btn-fifteen');
+let btnThirty = document.querySelector('#btn-thirty');
+
+btnFive.onclick = function(){
+//Uses the variables to remove the buttons when the user clicks on them.
+    btnFive.remove();
+    btnFifteen.remove();
+    btnThirty.remove();
+//Creates a div and saves it to a constant
+    const videoElement = document.createElement('div');
+//Set's the ID of that div to five-min-video
+    videoElement.setAttribute('class', 'video-style')
+//Injects the embeded video HTML into the new div
+    videoElement.innerHTML = fiveMinVideo;
+//Places the new div under the main-button id 
+    videoDiv.append(videoElement);
+//When button is clicked, changes the background color to black
+    body.style.backgroundColor = "black";
+
+}
+btnFifteen.onclick = function(){
+    btnFive.remove();
+    btnFifteen.remove();
+    btnThirty.remove();
+}
+btnThirty.onclick = function (){
+    btnFive.remove();
+    btnFifteen.remove();
+    btnThirty.remove();
+}
 
 
 
+
+
+
+//Slowy make the background color transition to black
 
