@@ -1,9 +1,11 @@
+body{
+    background-color: rebeccapurple;
+}
 .container {
     display: flex;
     justify-content: center;
 
 }
-
 .main-buttons {
     position: relative;
     text-align: center;
