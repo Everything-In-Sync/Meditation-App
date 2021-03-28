@@ -68,7 +68,7 @@ btnFifteen.onclick = function () {
         btnThirty.style.visibility = 'visible';
     }
 }
-btnThirty.onclick = function(){
+btnThirty.onclick = function () {
     videoDiv.innerHTML = thirtyMinMedVideo;
     video.style.visibility = 'visible';
     returnButton.style.visibility = 'visible';

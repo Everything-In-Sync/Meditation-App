@@ -1,0 +1,110 @@
+$purple:rebeccapurple;
+$zenFont:"zen", helvetica, sans-serif;
+
+@font-face { 
+    font-family: "zen"; 
+    src: url("../fonts/zen.ttf"); 
+  }
+
+body {
+    background-color: $purple;
+}
+button{
+    font-family: $zenFont;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+
+
+    button {
+        display: flex;
+        margin-top: 5%;
+        background: none;
+        color: $purple;
+        border-style: solid;
+        border-radius: 10px;
+        padding: 0px 15px 0px 15px;
+        cursor: pointer;
+        font-size: 20px;
+        &:hover{
+            border-color: $purple;
+            color:white;
+        }
+    }
+}
+
+
+.main-buttons{
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#btn-five{
+    flex: 1 0 700px;
+    flex-wrap: wrap;
+    font-size: 20px;
+    border-style:none;
+	background: $purple;
+	padding: 20px 0 20px 0;
+	cursor: pointer;
+    &:hover{
+        border-color: white;
+        color:white;}
+    
+}
+#btn-fifteen {
+    font-size: 20px;
+    flex: 2 0 700px;
+    flex-wrap: wrap;
+    font-size: 20px;
+    border-style:none;
+	background: $purple;
+	padding: 20px 0 20px 0;
+	cursor: pointer;
+    &:hover{
+        border-color: white;
+        color:white;}
+}
+#btn-thirty {
+    font-size: 20px;
+    flex: 3 0 700px;
+    flex-wrap: wrap;
+    font-size: 20px;
+    border-style:none;
+	background: $purple;
+	padding: 20px 0 20px 0;
+	cursor: pointer;
+    &:hover{
+        border-color: white;
+        color:white;}
+}
+
+// .main-buttons {
+//     position: relative;
+//     text-align: center;
+//     height: 100px;
+//     width: 200px;
+//     margin-top: 0%;
+// }
+/*centers the video in the absolute center of the viewport*/
+.video-style {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// .parent{
+//     display:flex;
+//     height: 50px;
+//     border: 20px solid green;
+//     flex-direction: row;
+// }
+// .child1{
+//     background-color: aquamarine;
+//     width: 200px;
+//     height: 200px;
+// }

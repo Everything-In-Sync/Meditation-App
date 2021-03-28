@@ -1,22 +1,119 @@
-body{
-    background-color: rebeccapurple;
+@font-face {
+  font-family: "zen";
+  src: url("../fonts/zen.ttf");
 }
-.container {
-    display: flex;
-    justify-content: center;
 
+body {
+  background-color: rebeccapurple;
 }
+
+button {
+  font-family: "zen", helvetica, sans-serif;
+}
+
+.head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.head button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5%;
+  background: none;
+  color: rebeccapurple;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 0px 15px 0px 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.head button:hover {
+  border-color: rebeccapurple;
+  color: white;
+}
+
 .main-buttons {
-    position: relative;
-    text-align: center;
-    height: 100px;
-    width: 200px;
-    margin-top: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
+#btn-five {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 700px;
+          flex: 1 0 700px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 20px;
+  border-style: none;
+  background: rebeccapurple;
+  padding: 20px 0 20px 0;
+  cursor: pointer;
+}
+
+#btn-five:hover {
+  border-color: white;
+  color: white;
+}
+
+#btn-fifteen {
+  font-size: 20px;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 0 700px;
+          flex: 2 0 700px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 20px;
+  border-style: none;
+  background: rebeccapurple;
+  padding: 20px 0 20px 0;
+  cursor: pointer;
+}
+
+#btn-fifteen:hover {
+  border-color: white;
+  color: white;
+}
+
+#btn-thirty {
+  font-size: 20px;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 0 700px;
+          flex: 3 0 700px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 20px;
+  border-style: none;
+  background: rebeccapurple;
+  padding: 20px 0 20px 0;
+  cursor: pointer;
+}
+
+#btn-thirty:hover {
+  border-color: white;
+  color: white;
+}
+
 /*centers the video in the absolute center of the viewport*/
-.video-style{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.video-style {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
+/*# sourceMappingURL=main.css.map */
