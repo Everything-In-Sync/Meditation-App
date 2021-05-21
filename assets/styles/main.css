@@ -39,6 +39,10 @@ button {
   color: white;
 }
 
+#title {
+  font-family: "zen", helvetica, sans-serif;
+}
+
 .main-buttons {
   display: -webkit-box;
   display: -ms-flexbox;

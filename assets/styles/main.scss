@@ -34,8 +34,9 @@ button{
         }
     }
 }
-
-
+#title{
+    font-family: $zenFont;
+}
 .main-buttons{
     display:flex;
     flex-flow: column;

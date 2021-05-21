@@ -1,6 +1,7 @@
 const body = document.querySelector('body');
 const videoDiv = document.querySelector('#video');
 const returnButtonDiv = document.querySelector('#return-button')
+const title = document.querySelector('#title');
 
 const returnButtonContent = `
     <button id="return-button">Return</button>
@@ -25,6 +26,7 @@ let btnFifteen = document.querySelector('#btn-fifteen');
 let btnThirty = document.querySelector('#btn-thirty');
 
 btnFive.onclick = function () {
+    title.style.visibility ='hidden';
     videoDiv.innerHTML = fiveMinMedVideo;
     video.style.visibility = 'visible';
     returnButton.style.visibility = 'visible';
@@ -34,6 +36,7 @@ btnFive.onclick = function () {
     body.style.backgroundColor = "black";
 
     returnButton.onclick = function () {
+        title.style.visibility = 'visible'
         const video = document.querySelector('#fiveMinMed');
         video.pause();
         body.style.backgroundColor = 'rebeccapurple';
@@ -48,6 +51,7 @@ returnButton = document.querySelector('#return-button');
 const video = document.querySelector('#video')
 
 btnFifteen.onclick = function () {
+    title.style.visibility ='hidden';
     videoDiv.innerHTML = fifteenMinMedVideo;
     video.style.visibility = 'visible';
     returnButton.style.visibility = 'visible';
@@ -57,6 +61,7 @@ btnFifteen.onclick = function () {
     body.style.backgroundColor = "#ebc99e";
 
     returnButton.onclick = function () {
+        title.style.visibility = 'visible'
         const video = document.querySelector('#fifteenMinMed');
         video.pause();
         videoDiv.style.visibility = 'hidden';
@@ -69,6 +74,7 @@ btnFifteen.onclick = function () {
     }
 }
 btnThirty.onclick = function () {
+    title.style.visibility ='hidden';
     videoDiv.innerHTML = thirtyMinMedVideo;
     video.style.visibility = 'visible';
     returnButton.style.visibility = 'visible';
@@ -78,6 +84,7 @@ btnThirty.onclick = function () {
     body.style.backgroundColor = "black";
 
     returnButton.onclick = function () {
+        title.style.visibility = 'visible'
         const video = document.querySelector('#thirtyMinMed');
         video.pause();
         body.style.backgroundColor = 'rebeccapurple';
